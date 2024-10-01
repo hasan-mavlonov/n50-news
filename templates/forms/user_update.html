@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'form:update' pk=user.pk %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="first_name">
+        <input value="{{ user.first_name }}" id="first_name" type="text" name="first_name" placeholder="first name">
+    </label>
+    <br>
+    <label for="last_name">
+        <input value="{{ user.last_name }}" id="last_name" type="text" name="last_name" placeholder="last name">
+    </label>
+    <br>
+    <input value="{{ user.image.url }}" name="image" type="file" accept="image/*" placeholder="image">
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="{% url 'form' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="first_name">
+        <input id="first_name" type="text" name="first_name" placeholder="first name">
+    </label>
+    <br>
+    <label for="last_name">
+        <input id="last_name" type="text" name="last_name" placeholder="last name">
+    </label>
+    <br>
+    <input name="image" type="file" accept="image/*" placeholder="image">
+    <select name="service_type" id="">
+        <option name="ab" value="ab"></option>
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
