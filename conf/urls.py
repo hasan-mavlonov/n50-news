@@ -10,6 +10,7 @@ urlpatterns = [
     path('form/', include('forms.urls', namespace="form")),
     path('', include('news.urls', namespace="news")),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('users/', include('users.urls', namespace="users")),
 
 ]
 
